@@ -1,0 +1,15 @@
+\begin{longtable}{|c|c|c|c|}
+\hline
+\multirow{2}{*}{Буква} &\multirow{2}{*}{Битовая строка} &
+\multicolumn{2} {|c|}{Паритетный бит } \\
+\hhline{~~--}
+       &    &  чётный (odd) & нечётный (even) \\
+\hline
+%% for row in odd_even.rows
+\VAR{row.char} &
+\VAR{row.code} &
+\VAR{(row.even + 1) % 2} &
+\VAR{row.even} \\
+\hline
+%% endfor
+\end{longtable}

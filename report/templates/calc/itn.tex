@@ -1,0 +1,10 @@
+\begin{enumerate}
+\item Исходное сообщение в виде цифр (всего 10), без последней:
+%% for digit in itn.digits
+\VAR{digit}\BLOCK{if loop.last};\BLOCK{else},\BLOCK{endif}
+%% endfor
+
+\item $n_{10} = ((\BLOCK{for a, b in itn.both}\VAR{a}\cdot \VAR{b}\BLOCK{if not loop.last}+\BLOCK{endif}\BLOCK{endfor}) \ mod \ 11) \ mod \ 10 = \VAR{itn.last_digit}$.
+
+
+\end{enumerate}

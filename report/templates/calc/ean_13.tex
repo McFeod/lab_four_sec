@@ -1,0 +1,9 @@
+\begin{enumerate}
+\item Исходное сообщение в виде цифр (всего 13), без последней:
+%% for digit in ean_13.digits
+\VAR{digit}\BLOCK{if loop.last};\BLOCK{else},\BLOCK{endif}
+%% endfor
+
+\item $S_e = \VAR{ean_13.sums[0]}$, $S_o = \VAR{ean_13.sums[1]}$;
+\item $cd = \VAR{ean_13.last_digit}$.
+\end{enumerate}

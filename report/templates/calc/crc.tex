@@ -1,0 +1,17 @@
+\begin{enumerate}
+\item Выбран полином $G(x)$: \VAR{'{:b}'.format(crc.polynomial)};
+\item Исходное сообщение: "\VAR{crc.message}";
+\item $ P(x) \cdot  x^N$: \BLOCK{for bit in crc.bits}\VAR{bit}\BLOCK{endfor};
+\item  Поиск контрольных битов:\\
+
+\begin{longtable}[h]{|c|c|}
+\hline
+Итерация & Остаток \\
+\hline
+%% for x in crc.steps
+\VAR{loop.index} & \VAR{'{:05b}'.format(x)} \\
+\hline
+%% endfor
+\end{longtable}
+\item Контрольная сумма: \VAR{crc.result}
+\end{enumerate}

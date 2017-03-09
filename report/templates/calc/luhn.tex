@@ -1,0 +1,14 @@
+\begin{enumerate}
+\item Исходное сообщение в виде цифр (всего 15), без последней:
+%% for digit in luhn.digits
+\VAR{digit}\BLOCK{if loop.last};\BLOCK{else},\BLOCK{endif}
+%% endfor
+
+\item Значения остатков от деления цифр:
+%% for digit in luhn.keeper.get_values()
+\VAR{digit}\BLOCK{if loop.last};\BLOCK{else},\BLOCK{endif}
+%% endfor
+
+\item $S_e = \VAR{luhn.sums[1]}$, $S_o = \VAR{luhn.sums[0]}$;
+\item $cd = \VAR{luhn.last_digit}$.
+\end{enumerate}

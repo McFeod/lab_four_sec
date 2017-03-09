@@ -1,0 +1,43 @@
+Подсчёт котрольных битов:
+\begin{enumerate}
+    \item Исходное сообщение: "\VAR{ecc.message}";
+    \item Первые  11 битов: \BLOCK{for x in ecc.source}\VAR{x}\BLOCK{endfor};
+    \item $XR$ = \VAR{'{:015b}'.format(ecc.xr)};
+    \item Матрица $N$: \\
+    \VAR{ecc.matrix}
+    \item Контрольные биты: \BLOCK{for x in ecc.control_sum}\VAR{x}\BLOCK{endfor}.
+\end{enumerate}
+
+
+Верификация:
+\begin{enumerate}
+    \item Исходное сообщение (15 битов): \BLOCK{for x in ecc_err_0.bits}\VAR{x}\BLOCK{endfor};
+    \item $XR$ = \VAR{'{:015b}'.format(ecc_err_0.xr)};
+    \item $pb$ = \VAR{ecc_err_0.pb};
+    \item Матрица $N$: \\
+    \VAR{ecc_err_0.matrix}
+    \item $s$ = \BLOCK{for x in ecc_err_0.syndromes}\VAR{x}\BLOCK{endfor};
+\end{enumerate}
+
+
+Верификация (1 ошибка):
+\begin{enumerate}
+    \item Исходное сообщение (15 битов): \BLOCK{for x in ecc_err_1.bits}\VAR{x}\BLOCK{endfor};
+    \item $XR$ = \VAR{'{:015b}'.format(ecc_err_1.xr)};
+    \item $pb$ = \VAR{ecc_err_1.pb};
+    \item Матрица $N$: \\
+    \VAR{ecc_err_1.matrix}
+    \item $s$ = \BLOCK{for x in ecc_err_1.syndromes}\VAR{x}\BLOCK{endfor};
+    \item Ошибка в бите № \VAR{ecc_err_1.error_in} в $XR$.
+\end{enumerate}
+
+
+Верификация (2 ошибки):
+\begin{enumerate}
+    \item Исходное сообщение (15 битов): \BLOCK{for x in ecc_err_2.bits}\VAR{x}\BLOCK{endfor};
+    \item $XR$ = \VAR{'{:015b}'.format(ecc_err_2.xr)};
+    \item $pb$ = \VAR{ecc_err_2.pb};
+    \item Матрица $N$: \\
+    \VAR{ecc_err_2.matrix}
+    \item $s$ = \BLOCK{for x in ecc_err_2.syndromes}\VAR{x}\BLOCK{endfor};
+\end{enumerate}
